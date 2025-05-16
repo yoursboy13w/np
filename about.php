@@ -1021,18 +1021,19 @@
           <span></span>
         </button>
         
+       
         <div class="nav-menu" id="navMenu">
           <ul class="nav-links">
-            <li><a href="index.html">गृहपृष्ठ</a></li>
-            <li><a href="about.html">हाम्रो बारेमा</a></li>
-            <li><a href="team.html">हाम्रो टिम</a></li>
-            <li><a href="member.html">सदस्यता</a></li>
-            <li><a href="high.html">नेतृत्व</a></li>
-            <li><a href="resource.html">स्रोतहरू</a></li>
-            <li><a href="pic.html">ग्यालरी</a></li>
+            <li><a href="index.php">गृहपृष्ठ</a></li>
+            <li><a href="about.php">हाम्रो बारेमा</a></li>
+            <li><a href="team.php">हाम्रो टिम</a></li>
+            <li><a href="member.php">सदस्यता</a></li>
+            <li><a href="high.php">नेतृत्व</a></li>
+            <li><a href="resource.php">स्रोतहरू</a></li>
+            <li><a href="pic.php">ग्यालरी</a></li>
             <li><a href="contact.php">सम्पर्क</a></li>
           </ul>
-          <a href="online.html" class="membership-btn">अनलाइन सदस्यता</a>
+          <a href="online.php" class="membership-btn">अनलाइन सदस्यता</a>
         </div>
       </nav>
     </div>

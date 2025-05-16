@@ -37,10 +37,6 @@
       font-family: 'Poppins', sans-serif;
       background-color: var(--light-bg);
     }
-
-    a{
-      text-decoration: none;
-    }
     
     /* Top bar styles */
     .top-bar {
@@ -252,111 +248,51 @@
 
 
 
-
-    .document-card {
-    background-color: #e8e8e8;
-    border-radius: 4px;
-    padding: 20px;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    max-width: 1200px;
-    box-sizing: border-box;
-}
-
-@media (min-width: 768px) {
-    .document-card {
-        flex-direction: row;
-        align-items: center;
+    h1 {
+      font-size: 5rem;
+      color: red;
+      margin: 0 0 30px 0;
     }
-}
 
-.document-image {
-    width: 100%;
-    max-width: 150px;
-    margin-right: 20px;
-    margin-bottom: 15px;
-}
-
-@media (min-width: 768px) {
-    .document-image {
-        margin-bottom: 0;
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
-}
 
-.document-info {
-    flex-grow: 1;
-}
+    
 
-.document-date {
-    color: #666;
-    margin-bottom: 5px;
-}
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
 
-.document-title {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.document-subtitle {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.button-container {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-    flex-wrap: wrap;
-}
-
-@media (min-width: 768px) {
-    .button-container {
-        justify-content: flex-start;
-        margin-left: auto;
+      button {
+        padding: 10px 25px;
+        font-size: 16px;
+      }
     }
-}
 
-.view-button, .download-button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.2rem;
+        margin-top: 64px;
+        text-align: center;
+      }
 
-.view-button {
-    background-color: #008800;
-}
-
-.download-button {
-    background-color: #008800;
-}
-
-.view-button:hover, .download-button:hover {
-    opacity: 0.9;
-}
-
-.icon {
-    margin-right: 5px;
-}
-
-.view-count {
-    color: #666;
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-}
-
-
-
+      button {
+        padding: 8px 20px;
+        font-size: 14px;
+        font-size: 14px;
+        margin-left: 104px;
+      }
+    }
 
 
 
@@ -586,11 +522,188 @@
 
 
 
-
-
-
-
-
+  .l {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      background-color: #111;
+      text-align: center;
+      transform-style: preserve-3d;
+      animation: containerPulse 8s ease-in-out infinite;
+    }
+    
+    h1 {
+      font-size: 5rem;
+      margin: 0;
+      text-align: center;
+      font-family: 'Arial Black', sans-serif;
+      position: relative;
+      padding: 20px;
+      background: linear-gradient(45deg, #FF6347, #6A5ACD, #FFD700, #32CD32);
+      background-size: 400% 400%;
+      animation: backgroundAnimation 5s ease infinite;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: 5px;
+      filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
+    }
+    
+    .letter {
+      display: inline-block;
+      opacity: 0;
+      transform-origin: center center;
+      transform: translateY(60px) translateZ(-100px) scale(0.5) rotateX(45deg) rotateY(20deg);
+      animation: advancedFadeInUp 2s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+    }
+    
+    .letter::before {
+      content: attr(data-char);
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.15;
+      transform: translateZ(-10px) translateY(5px) scale(1.1);
+      filter: blur(5px);
+      color: #fff;
+      z-index: -1;
+    }
+    
+    .letter::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: lineExpand 1.5s forwards ease-out;
+      animation-delay: calc(0.1s * var(--index) + 1s);
+      opacity: 0.7;
+      border-radius: 2px;
+      filter: blur(1px);
+    }
+    
+    .letter:nth-child(1) { --index: 1; animation-delay: 0.1s; color: #FF6347; }
+    .letter:nth-child(2) { --index: 2; animation-delay: 0.2s; color: #6A5ACD; }
+    .letter:nth-child(3) { --index: 3; animation-delay: 0.3s; color: #FFD700; }
+    .letter:nth-child(4) { --index: 4; animation-delay: 0.4s; color: #32CD32; }
+    .letter:nth-child(5) { --index: 5; animation-delay: 0.5s; color: #FF4500; }
+    .letter:nth-child(6) { --index: 6; animation-delay: 0.6s; color: #FF1493; }
+    .letter:nth-child(7) { --index: 7; animation-delay: 0.7s; color: #00BFFF; }
+    .letter:nth-child(8) { --index: 8; animation-delay: 0.8s; color: #8A2BE2; } /* Space */
+    .letter:nth-child(9) { --index: 9; animation-delay: 0.9s; color: #20B2AA; }
+    .letter:nth-child(10) { --index: 10; animation-delay: 1s; color: #FF69B4; }
+    .letter:nth-child(11) { --index: 11; animation-delay: 1.1s; color: #7FFF00; }
+    .letter:nth-child(12) { --index: 12; animation-delay: 1.2s; color: #DC143C; }
+    
+    .glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150%;
+      height: 150%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+      filter: blur(20px);
+      z-index: -1;
+      opacity: 0;
+      animation: glowPulse 3s forwards infinite;
+      animation-delay: calc(0.1s * var(--index) + 1s);
+    }
+    
+    @keyframes advancedFadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.8) rotate(15deg) translateZ(-50px);
+      }
+      25% {
+        opacity: 0.3;
+        transform: translateY(10px) scale(1.1) rotate(10deg) translateZ(20px);
+      }
+      50% {
+        opacity: 0.6;
+        transform: translateY(-5px) scale(1.05) rotate(5deg) translateZ(10px);
+      }
+      75% {
+        opacity: 0.9;
+        transform: translateY(0) scale(1) rotate(-5deg) translateZ(5px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0) translateZ(0);
+      }
+    }
+    
+    @keyframes backgroundAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    @keyframes lineExpand {
+      0% { transform: scaleX(0); opacity: 0; }
+      50% { transform: scaleX(1.2); opacity: 0.7; }
+      100% { transform: scaleX(1); opacity: 0.4; }
+    }
+    
+    @keyframes glowPulse {
+      0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+      50% { opacity: 0.3; transform: translate(-50%, -50%) scale(1.1); }
+      100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+    }
+    
+    @keyframes containerPulse {
+      0% { transform: translateZ(0) rotateX(0deg); }
+      25% { transform: translateZ(30px) rotateX(2deg); }
+      50% { transform: translateZ(0) rotateX(0deg); }
+      75% { transform: translateZ(-20px) rotateX(-2deg); }
+      100% { transform: translateZ(0) rotateX(0deg); }
+    }
+    
+    /* Added 3D particle effects */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -2;
+    }
+    
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      transform-style: preserve-3d;
+      filter: blur(2px);
+      animation: particleFloat 15s infinite linear;
+    }
+    
+    @keyframes particleFloat {
+      0% {
+        transform: translateX(0) translateY(0) translateZ(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.8;
+      }
+      90% {
+        opacity: 0.4;
+      }
+      100% {
+        transform: translateX(calc(var(--x) * 100px)) 
+                   translateY(calc(var(--y) * 100px)) 
+                   translateZ(calc(var(--z) * 100px)) 
+                   rotate(360deg);
+        opacity: 0;
+      }
+    }
 
   </style>
 </head>
@@ -621,110 +734,44 @@
           <span></span>
         </button>
         
+        
         <div class="nav-menu" id="navMenu">
           <ul class="nav-links">
-            <li><a href="index.html">गृहपृष्ठ</a></li>
-            <li><a href="about.html">हाम्रो बारेमा</a></li>
-            <li><a href="team.html">हाम्रो टिम</a></li>
-            <li><a href="member.html">सदस्यता</a></li>
-            <li><a href="high.html">नेतृत्व</a></li>
-            <li><a href="resource.html">स्रोतहरू</a></li>
-            <li><a href="pic.html">ग्यालरी</a></li>
-            <li><a href="conatct.php">सम्पर्क</a></li>
+            <li><a href="index.php">गृहपृष्ठ</a></li>
+            <li><a href="about.php">हाम्रो बारेमा</a></li>
+            <li><a href="team.php">हाम्रो टिम</a></li>
+            <li><a href="member.php">सदस्यता</a></li>
+            <li><a href="high.php">नेतृत्व</a></li>
+            <li><a href="resource.php">स्रोतहरू</a></li>
+            <li><a href="pic.php">ग्यालरी</a></li>
+            <li><a href="contact.php">सम्पर्क</a></li>
           </ul>
-          <a href="online.html" class="membership-btn">अनलाइन सदस्यता</a>
+          <a href="online.php" class="membership-btn">अनलाइन सदस्यता</a>
         </div>
       </nav>
     </div>
   </header>
 
- 
+  <div class="particles" id="particles"></div>
+  <div class="l">
+    <h1>
+      <span class="letter" data-char="C">C</span>
+      <span class="letter" data-char="O">O</span>
+      <span class="letter" data-char="M">M</span>
+      <span class="letter" data-char="M">M</span>
+      <span class="letter" data-char="I">I</span>
+      <span class="letter" data-char="N">N</span>
+      <span class="letter" data-char="G">G</span>
+      <span class="letter" data-char=" "> </span> <!-- Space between words -->
+      <span class="letter" data-char="S">S</span>
+      <span class="letter" data-char="O">O</span>
+      <span class="letter" data-char="O">O</span>
+      <span class="letter" data-char="N">N</span>
+    </h1>
+    <button onclick="location.href='index.html'">GO BACK HOME</button>
+  </div>
 
-
-
-
-
-  <div class="document-card">
-    <img src="./assets/pp.jpg" alt="नेपाली कांग्रेस लेखापरीक्षण प्रतिवेदन" class="document-image">
-    <div class="document-info">
-        <p class="document-date">Friday, January 17th 2025</p>
-        <h2 class="document-title">Nepali Congress Audit Report, F/Y 2080-081</h2>
-        <p class="document-subtitle">नेपाली कांग्रेस लेखापरीक्षण प्रतिवेदन, आ.व. २०८०-०८१</p>
-    </div>
-    <div class="button-container">
-        <div class="view-count">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="icon">
-                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
-                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5
-                 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-            </svg>
-            85
-        </div>
-        <a href="http://nepalicongress.org/single/documents/nepali-congress-audit-report-f-y-2080-081" class="view-button">View More</a>
-        <a href="http://nepalicongress.org/single/documents/nepali-congress-audit-report-f-y-2080-081" class="download-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="icon">
-                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-            </svg>
-            Download
-        </a>
-    </div>
-</div>
-
-<div class="document-card">
-    <img src="./assets/pi.jpg" alt="लेखापरीक्षण प्रतिवेदन" class="document-image">
-    <div class="document-info">
-        <p class="document-date">Sunday, May 14th 2023</p>
-        <h2 class="document-title">Audit Report 2078/079</h2>
-        <p class="document-subtitle">लेखापरीक्षण प्रतिवेदन २०७८/०७९</p>
-    </div>
-    <div class="button-container">
-        <div class="view-count">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="icon">
-                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
-                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-            </svg>
-            431
-        </div>
-        <a href="https://www.nepalicongress.org/single/documents/audit-report-2078-079" class="view-button">View More</a>
-        <a href="https://www.nepalicongress.org/single/documents/audit-report-2078-079" class="download-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="icon">
-                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-            </svg>
-            Download
-        </a>
-    </div>
-</div>
-
-<div class="document-card">
-    <img src="./assets/nc.jpg" alt="स्थानीय निर्वाचन घोषणापत्र" class="document-image">
-    <div class="document-info">
-        <p class="document-date">Wednesday, May 4th 2022</p>
-        <h2 class="document-title">NC Local Election Manifesto - 2079 (Abridged)</h2>
-        <p class="document-subtitle">नेपाली कांग्रेस स्थानीय निर्वाचन घोषणापत्र - २०७९ (संक्षिप्त)</p>
-    </div>
-    <div class="button-container">
-        <div class="view-count">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="icon">
-                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
-                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-            </svg>
-            799
-        </div>
-        <a href="https://www.nepalicongress.org/single/documents/nc-local-election-manifesto-2079-abridged" class="view-button">View More</a>
-        <a href="https://www.nepalicongress.org/single/documents/nc-local-election-manifesto-2079-abridged" class="download-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="icon">
-                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-            </svg>
-            Download
-        </a>
-    </div>
-</div>
-
-
-
+  
 
 
 
@@ -760,7 +807,7 @@
           <li><a href="high.html">नेतृत्व</a></li>
           <li><a href="resource.html">स्रोतहरू</a></li>
           <li><a href="pic.html">ग्यालरी</a></li>
-          <li><a href="conatct.html">सम्पर्क</a></li>
+          <li><a href="contact.php">सम्पर्क</a></li>
         </ul>
       </div>
       
@@ -797,6 +844,11 @@
     </div>
   </div>
 </footer>
+
+
+
+
+
 
 
   <script>
@@ -840,6 +892,62 @@
 
 
 
+
+
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Add glow elements to each letter
+      const letters = document.querySelectorAll('.letter');
+      letters.forEach((letter, i) => {
+        const glow = document.createElement('div');
+        glow.className = 'glow';
+        glow.style.setProperty('--index', i+1);
+        letter.appendChild(glow);
+      });
+      
+      // Create particles
+      const particlesContainer = document.getElementById('particles');
+      const numParticles = 50;
+      
+      for (let i = 0; i < numParticles; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Random colors
+        const colors = ['#FF6347', '#6A5ACD', '#FFD700', '#32CD32', '#FF4500', '#00BFFF', '#FF1493'];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        particle.style.background = randomColor;
+        
+        // Random size
+        const size = Math.random() * 6 + 2;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        
+        // Random position
+        const x = Math.random() * 100;
+        const y = Math.random() * 100;
+        particle.style.left = `${x}%`;
+        particle.style.top = `${y}%`;
+        
+        // Random animation
+        const xDir = Math.random() * 2 - 1;
+        const yDir = Math.random() * 2 - 1;
+        const zDir = Math.random() * 2 - 1;
+        particle.style.setProperty('--x', xDir);
+        particle.style.setProperty('--y', yDir);
+        particle.style.setProperty('--z', zDir);
+        
+        // Random animation duration and delay
+        const duration = Math.random() * 20 + 10;
+        const delay = Math.random() * 5;
+        particle.style.animationDuration = `${duration}s`;
+        particle.style.animationDelay = `${delay}s`;
+        
+        particlesContainer.appendChild(particle);
+      }
+    });
 
 
   </script>

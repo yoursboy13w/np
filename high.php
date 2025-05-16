@@ -14,9 +14,6 @@
 
   <title>गैंडाकोट वडा नम्बर ५ - नेपाली कांग्रेस</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
     
@@ -39,11 +36,6 @@
     body {
       font-family: 'Poppins', sans-serif;
       background-color: var(--light-bg);
-    }
-
-
-    a{
-      text-decoration: none;
     }
     
     /* Top bar styles */
@@ -257,159 +249,228 @@
 
 
 
-    .gallery-container {
-      max-width: 1200px;
+
+
+
+
+    :root {
+      --primary: #1e40af;
+      --primary-light: #3b82f6;
+      --secondary: #0f172a;
+      --accent: #f59e0b;
+      --light: #f8fafc;
+      --dark: #0f172a;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+
+
+
+
+
+
+
+    .v {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      margin-bottom: 3rem;
+    }
+    
+    .v::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath fill='white' fill-opacity='0.1' d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z'%3E%3C/path%3E%3C/svg%3E");
+      opacity: 0.3;
+    }
+    
+    .v h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .header p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    
+
+    
+    .team-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2.5rem;
+      padding: 0 2rem 4rem;
+      max-width: 1400px;
       margin: 0 auto;
     }
     
-    .gallery-title {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 28px;
-      color:var(--primary-green);
+    .member-card {
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s ease;
+      position: relative;
+      z-index: 1;
     }
     
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 15px;
+    .member-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
     }
     
-    .gallery-item {
+    .member-card:hover .card-bg {
+      height: 100%;
+    }
+    
+    .member-card:hover .role {
+      color: white;
+    }
+    
+    .member-card:hover .quote {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .card-bg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
+      transition: height 0.4s ease;
+      z-index: -1;
+    }
+    
+    .card-content {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .img-container {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      padding: 5px;
+      background-color: white;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
       position: relative;
       overflow: hidden;
-      border-radius: 4px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      aspect-ratio: 1/1;
-      background-color: #eee;
     }
     
-    .gallery-item:hover {
-      transform: translateY(-5px);
-    }
-    
-    .gallery-item img {
+    .img-container img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      display: block;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #3b82f6;
+      transition: transform 0.5s ease;
     }
     
-    /* Responsive adjustments */
-    @media screen and (max-width: 900px) {
-      .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    .member-card:hover .img-container img {
+      transform: scale(1.1);
+    }
+    
+    .name {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color:#0f172a;
+      transition: color 0.3s ease;
+    }
+    
+    .member-card:hover .name {
+      color: white;
+    }
+    
+    .role {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--primary);
+      margin-bottom: 3rem;
+      transition: color 0.3s ease;
+    }
+    
+    .quote {
+      text-align: center;
+      font-size: 0.95rem;
+      color: whitesmoke;
+      transition: color 0.3s ease;
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .social-icon {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: var(--primary);
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .social-icon:hover {
+      background-color: var(--accent);
+      color: white;
+      transform: translateY(-3px);
+    }
+    
+    @media (max-width: 768px) {
+      .v h1 {
+        font-size: 2.5rem;
+      }
+      
+      .team-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+        padding: 0 1.5rem 3rem;
       }
     }
     
-    @media screen and (max-width: 600px) {
-      .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 10px;
+    @media (max-width: 480px) {
+      .v h1 {
+        font-size: 2rem;
+      }
+      
+      .header p {
+        font-size: 1rem;
+      }
+      
+      .team-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem 2rem;
       }
     }
-    
-    @media screen and (max-width: 400px) {
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-      }
-    }
-
-
-
-
-
-
-
-
-
-/* Enhanced gallery styles for fancybox integration */
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 4px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    aspect-ratio: 1/1;
-    cursor: pointer;
-  }
-  
-  .gallery-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  }
-  
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .gallery-item:hover img {
-    transform: scale(1.05);
-  }
-  
-  /* Fancybox custom styling */
-  .fancybox-bg {
-    background: rgba(0, 0, 0, 0.9);
-  }
-  
-  .fancybox-button {
-    background: rgba(30, 30, 30, 0.6);
-  }
-  
-  .fancybox-button:hover {
-    background: var(--primary-green);
-  }
-  
-  .fancybox-caption {
-    background: linear-gradient(to bottom, 
-      rgba(0, 0, 0, 0) 0%, 
-      rgba(0, 0, 0, 0.8) 100%);
-    padding: 30px 0;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  /* Mobile responsive adjustments */
-  @media screen and (max-width: 768px) {
-    .fancybox-thumbs {
-      width: 70px;
-    }
-    
-    .fancybox-show-thumbs .fancybox-inner {
-      right: 70px;
-    }
-    
-    .fancybox-thumbs__list a {
-      max-width: 60px;
-      max-height: 45px;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .fancybox-caption {
-      padding: 15px 0;
-    }
-    
-    .fancybox-button {
-      padding: 10px;
-    }
-  }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -643,7 +704,14 @@
       gap: 30px;
     }
   }
-    
+
+
+
+
+
+
+
+
   </style>
 </head>
 <body>
@@ -673,18 +741,19 @@
           <span></span>
         </button>
         
+       
         <div class="nav-menu" id="navMenu">
           <ul class="nav-links">
-            <li><a href="index.html">गृहपृष्ठ</a></li>
-            <li><a href="about.html">हाम्रो बारेमा</a></li>
-            <li><a href="team.html">हाम्रो टिम</a></li>
-            <li><a href="member.html">सदस्यता</a></li>
-            <li><a href="high.html">नेतृत्व</a></li>
-            <li><a href="resource.html">स्रोतहरू</a></li>
-            <li><a href="pic.html">ग्यालरी</a></li>
+            <li><a href="index.php">गृहपृष्ठ</a></li>
+            <li><a href="about.php">हाम्रो बारेमा</a></li>
+            <li><a href="team.php">हाम्रो टिम</a></li>
+            <li><a href="member.php">सदस्यता</a></li>
+            <li><a href="high.php">नेतृत्व</a></li>
+            <li><a href="resource.php">स्रोतहरू</a></li>
+            <li><a href="pic.php">ग्यालरी</a></li>
             <li><a href="contact.php">सम्पर्क</a></li>
           </ul>
-          <a href="online.html" class="membership-btn">अनलाइन सदस्यता</a>
+          <a href="online.php" class="membership-btn">अनलाइन सदस्यता</a>
         </div>
       </nav>
     </div>
@@ -697,275 +766,224 @@
 
 
 
-<!-- Gallery Section with Fancybox -->
-<div class="gallery-container">
-  <h1 class="gallery-title">ग्यालरी-गैंडाकोट वडा नं. ५ - नेपाली कांग्रेस</h1>
-  <br>
-  <br>
-  <div class="gallery">
-    <!-- Gallery Items with Fancybox -->
-    <div class="gallery-item">
-      <a href="./assets/0.jpg" data-fancybox="gallery" data-caption="Gallery Image 1">
-        <img src="./assets/0.jpg" alt="Gallery Image 1">
-      </a>
+
+
+  <div class="v">
+    <h1>सदस्यहरूको टिम</h1>
+    <p>हाम्रो समुदायमा सक्रिय र समर्पित सदस्यहरू</p>
+  </div>
+  
+
+  
+  <div class="team-container">
+    <div class="member-card">
+      <div class="card-bg"></div>
+      <div class="card-content">
+        <div class="img-container">
+          <img src="/api/placeholder/400/400" alt="लक्ष्मण कार्की">
+        </div>
+        <h3 class="name">लक्ष्मण कार्की</h3>
+        <h4 class="role">अध्यक्ष</h4>
+        <p class="quote">"समाजको समृद्धिका लागि खेलकुद अनिवार्य छ।"</p>
+        <div class="social-icons">
+          <div class="social-icon">f</div>
+          <div class="social-icon">in</div>
+          <div class="social-icon">@</div>
+        </div>
+      </div>
     </div>
-    <div class="gallery-item">
-      <a href="./assets/a.jpg" data-fancybox="gallery" data-caption="Gallery Image 2">
-        <img src="./assets/a.jpg" alt="Gallery Image 2">
-      </a>
+    
+    <div class="member-card">
+      <div class="card-bg"></div>
+      <div class="card-content">
+        <div class="img-container">
+          <img src="/api/placeholder/400/400" alt="सिता गुरुङ">
+        </div>
+        <h3 class="name">सिता गुरुङ</h3>
+        <h4 class="role">उपाध्यक्ष</h4>
+        <p class="quote">"महिला सहभागिता खेलकुदमा बढाउनुपर्छ।"</p>
+        <div class="social-icons">
+          <div class="social-icon">f</div>
+          <div class="social-icon">in</div>
+          <div class="social-icon">@</div>
+        </div>
+      </div>
     </div>
-    <div class="gallery-item">
-      <a href="./assets/e.jpg" data-fancybox="gallery" data-caption="Gallery Image 3">
-        <img src="./assets/e.jpg" alt="Gallery Image 3">
-      </a>
+    
+    <div class="member-card">
+      <div class="card-bg"></div>
+      <div class="card-content">
+        <div class="img-container">
+          <img src="./assets/laxman.jpg" alt="राम थापा">
+        </div>
+        <h3 class="name">राम थापा</h3>
+        <h4 class="role">महासचिव</h4>
+        <p class="quote">"युवाहरूलाई नेतृत्वका लागि प्रेरित गरौं।"</p>
+        <div class="social-icons">
+          <div class="social-icon">f</div>
+          <div class="social-icon">in</div>
+          <div class="social-icon">@</div>
+        </div>
+      </div>
     </div>
-    <div class="gallery-item">
-      <a href="./assets/i.jpg" data-fancybox="gallery" data-caption="Gallery Image 4">
-        <img src="./assets/i.jpg" alt="Gallery Image 4">
-      </a>
+
+    <div class="member-card">
+      <div class="card-bg"></div>
+      <div class="card-content">
+        <div class="img-container">
+          <img src="./assets/laxman.jpg" alt="गीता शर्मा">
+        </div>
+        <h3 class="name">गीता शर्मा</h3>
+        <h4 class="role">कोषाध्यक्ष</h4>
+        <p class="quote">"पारदर्शिता नै संस्थाको बलियो आधार हो।"</p>
+        <div class="social-icons">
+          <div class="social-icon">f</div>
+          <div class="social-icon">in</div>
+          <div class="social-icon">@</div>
+        </div>
+      </div>
     </div>
-    <div class="gallery-item">
-      <a href="./assets/kaka.jpg" data-fancybox="gallery" data-caption="Gallery Image 5">
-        <img src="./assets/kaka.jpg" alt="Gallery Image 5">
-      </a>
+    
+    <div class="member-card">
+      <div class="card-bg"></div>
+      <div class="card-content">
+        <div class="img-container">
+          <img src="/api/placeholder/400/400" alt="दिपक खत्री">
+        </div>
+        <h3 class="name">दिपक खत्री</h3>
+        <h4 class="role">प्रशिक्षण प्रमुख</h4>
+        <p class="quote">"खेलकुदमा सिकाइ निरन्तर हुनुपर्छ।"</p>
+        <div class="social-icons">
+          <div class="social-icon">f</div>
+          <div class="social-icon">in</div>
+          <div class="social-icon">@</div>
+        </div>
+      </div>
     </div>
-    <div class="gallery-item">
-      <a href="./assets/laxman.jpg" data-fancybox="gallery" data-caption="Gallery Image 6">
-        <img src="./assets/laxman.jpg" alt="Gallery Image 6">
-      </a>
+    
+    <div class="member-card">
+      <div class="card-bg"></div>
+      <div class="card-content">
+        <div class="img-container">
+          <img src="/api/placeholder/400/400" alt="सरिता पौडेल">
+        </div>
+        <h3 class="name">सरिता पौडेल</h3>
+        <h4 class="role">सदस्य</h4>
+        <p class="quote">"सामूहिक भावनाले हरेक लक्ष्य पूरा हुन्छ।"</p>
+        <div class="social-icons">
+          <div class="social-icon">f</div>
+          <div class="social-icon">in</div>
+          <div class="social-icon">@</div>
+        </div>
+      </div>
     </div>
-    <div class="gallery-item">
-      <a href="./assets/np 42.jpg" data-fancybox="gallery" data-caption="Gallery Image 7">
-        <img src="./assets/np 42.jpg" alt="Gallery Image 7">
-      </a>
+    
+    <div class="member-card">
+      <div class="card-bg"></div>
+      <div class="card-content">
+        <div class="img-container">
+          <img src="/api/placeholder/400/400" alt="अजय श्रेष्ठ">
+        </div>
+        <h3 class="name">अजय श्रेष्ठ</h3>
+        <h4 class="role">विभागीय प्रमुख</h4>
+        <p class="quote">"प्रतिस्पर्धात्मक भावनाले उन्नति गर्छौं।"</p>
+        <div class="social-icons">
+          <div class="social-icon">f</div>
+          <div class="social-icon">in</div>
+          <div class="social-icon">@</div>
+        </div>
+      </div>
     </div>
-    <div class="gallery-item">
-      <a href="./assets/q.jpg" data-fancybox="gallery" data-caption="Gallery Image 8">
-        <img src="./assets/q.jpg" alt="Gallery Image 8">
-      </a>
+    
+    <div class="member-card">
+      <div class="card-bg"></div>
+      <div class="card-content">
+        <div class="img-container">
+          <img src="/api/placeholder/400/400" alt="अन्जली तामाङ">
+        </div>
+        <h3 class="name">अन्जली तामाङ</h3>
+        <h4 class="role">संयोजक</h4>
+        <p class="quote">"समावेशी खेलकुद नीति आवश्यक छ।"</p>
+        <div class="social-icons">
+          <div class="social-icon">f</div>
+          <div class="social-icon">in</div>
+          <div class="social-icon">@</div>
+        </div>
+      </div>
     </div>
-    <div class="gallery-item">
-      <a href="./assets/r.jpg" data-fancybox="gallery" data-caption="Gallery Image 9">
-        <img src="./assets/r.jpg" alt="Gallery Image 9">
-      </a>
+    
+    <div class="member-card">
+      <div class="card-bg"></div>
+      <div class="card-content">
+        <div class="img-container">
+          <img src="/api/placeholder/400/400" alt="बिनोद बस्नेत">
+        </div>
+        <h3 class="name">बिनोद बस्नेत</h3>
+        <h4 class="role">योजना प्रमुख</h4>
+        <p class="quote">"सोच राम्रो भए योजना सफल हुन्छ।"</p>
+        <div class="social-icons">
+          <div class="social-icon">f</div>
+          <div class="social-icon">in</div>
+          <div class="social-icon">@</div>
+        </div>
+      </div>
     </div>
-    <div class="gallery-item">
-      <a href="./assets/s.jpg" data-fancybox="gallery" data-caption="Gallery Image 10">
-        <img src="./assets/s.jpg" alt="Gallery Image 10">
-      </a>
+    
+    <div class="member-card">
+      <div class="card-bg"></div>
+      <div class="card-content">
+        <div class="img-container">
+          <img src="/api/placeholder/400/400" alt="सुमन राई">
+        </div>
+        <h3 class="name">सुमन राई</h3>
+        <h4 class="role">प्रचार प्रमुख</h4>
+        <p class="quote">"प्रभावकारी सञ्चारले सफलता ल्याउँछ।"</p>
+        <div class="social-icons">
+          <div class="social-icon">f</div>
+          <div class="social-icon">in</div>
+          <div class="social-icon">@</div>
+        </div>
+      </div>
     </div>
-    <div class="gallery-item">
-      <a href="./assets/t.jpg" data-fancybox="gallery" data-caption="Gallery Image 11">
-        <img src="./assets/t.jpg" alt="Gallery Image 11">
-      </a>
+    
+    <div class="member-card">
+      <div class="card-bg"></div>
+      <div class="card-content">
+        <div class="img-container">
+          <img src="/api/placeholder/400/400" alt="मनिषा अधिकारी">
+        </div>
+        <h3 class="name">मनिषा अधिकारी</h3>
+        <h4 class="role">सदस्य</h4>
+        <p class="quote">"विविधता नै हाम्रो शक्ति हो।"</p>
+        <div class="social-icons">
+          <div class="social-icon">f</div>
+          <div class="social-icon">in</div>
+          <div class="social-icon">@</div>
+        </div>
+      </div>
     </div>
-    <div class="gallery-item">
-      <a href="./assets/u.jpg" data-fancybox="gallery" data-caption="Gallery Image 12">
-        <img src="./assets/u.jpg" alt="Gallery Image 12">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/w.jpg" data-fancybox="gallery" data-caption="Gallery Image 13">
-        <img src="./assets/w.jpg" alt="Gallery Image 13">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/y.jpg" data-fancybox="gallery" data-caption="Gallery Image 14">
-        <img src="./assets/y.jpg" alt="Gallery Image 14">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np.jpg" data-fancybox="gallery" data-caption="Gallery Image 15">
-        <img src="./assets/np.jpg" alt="Gallery Image 15">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np1.jpg" data-fancybox="gallery" data-caption="Gallery Image 16">
-        <img src="./assets/np1.jpg" alt="Gallery Image 16">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np3.jpg" data-fancybox="gallery" data-caption="Gallery Image 17">
-        <img src="./assets/np3.jpg" alt="Gallery Image 17">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np5.jpg" data-fancybox="gallery" data-caption="Gallery Image 18">
-        <img src="./assets/np5.jpg" alt="Gallery Image 18">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 6.jpg" data-fancybox="gallery" data-caption="Gallery Image 19">
-        <img src="./assets/np 6.jpg" alt="Gallery Image 19">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 7.jpg" data-fancybox="gallery" data-caption="Gallery Image 20">
-        <img src="./assets/np 7.jpg" alt="Gallery Image 20">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 8.jpg" data-fancybox="gallery" data-caption="Gallery Image 21">
-        <img src="./assets/np 8.jpg" alt="Gallery Image 21">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 9.jpg" data-fancybox="gallery" data-caption="Gallery Image 22">
-        <img src="./assets/np 9.jpg" alt="Gallery Image 22">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 10.jpg" data-fancybox="gallery" data-caption="Gallery Image 23">
-        <img src="./assets/np 10.jpg" alt="Gallery Image 23">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 11.jpg" data-fancybox="gallery" data-caption="Gallery Image 24">
-        <img src="./assets/np 11.jpg" alt="Gallery Image 24">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 39.jpg" data-fancybox="gallery" data-caption="Gallery Image 25">
-        <img src="./assets/np 39.jpg" alt="Gallery Image 25">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 12.jpg" data-fancybox="gallery" data-caption="Gallery Image 26">
-        <img src="./assets/np 12.jpg" alt="Gallery Image 26">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 14.jpg" data-fancybox="gallery" data-caption="Gallery Image 27">
-        <img src="./assets/np 14.jpg" alt="Gallery Image 27">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 40.jpg" data-fancybox="gallery" data-caption="Gallery Image 28">
-        <img src="./assets/np 40.jpg" alt="Gallery Image 28">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np1.jpg" data-fancybox="gallery" data-caption="Gallery Image 29">
-        <img src="./assets/np1.jpg" alt="Gallery Image 29">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 17.jpg" data-fancybox="gallery" data-caption="Gallery Image 30">
-        <img src="./assets/np 17.jpg" alt="Gallery Image 30">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 18.jpg" data-fancybox="gallery" data-caption="Gallery Image 31">
-        <img src="./assets/np 18.jpg" alt="Gallery Image 31">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 19.jpg" data-fancybox="gallery" data-caption="Gallery Image 32">
-        <img src="./assets/np 19.jpg" alt="Gallery Image 32">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 20.jpg" data-fancybox="gallery" data-caption="Gallery Image 33">
-        <img src="./assets/np 20.jpg" alt="Gallery Image 33">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 23.jpg" data-fancybox="gallery" data-caption="Gallery Image 34">
-        <img src="./assets/np 23.jpg" alt="Gallery Image 34">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 24.jpg" data-fancybox="gallery" data-caption="Gallery Image 35">
-        <img src="./assets/np 24.jpg" alt="Gallery Image 35">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 25.jpg" data-fancybox="gallery" data-caption="Gallery Image 36">
-        <img src="./assets/np 25.jpg" alt="Gallery Image 36">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 26.jpg" data-fancybox="gallery" data-caption="Gallery Image 37">
-        <img src="./assets/np 26.jpg" alt="Gallery Image 37">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 27.jpg" data-fancybox="gallery" data-caption="Gallery Image 38">
-        <img src="./assets/np 27.jpg" alt="Gallery Image 38">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 28.jpg" data-fancybox="gallery" data-caption="Gallery Image 39">
-        <img src="./assets/np 28.jpg" alt="Gallery Image 39">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 29.jpg" data-fancybox="gallery" data-caption="Gallery Image 40">
-        <img src="./assets/np 29.jpg" alt="Gallery Image 40">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 30.jpg" data-fancybox="gallery" data-caption="Gallery Image 41">
-        <img src="./assets/np 30.jpg" alt="Gallery Image 41">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 31.jpg" data-fancybox="gallery" data-caption="Gallery Image 42">
-        <img src="./assets/np 31.jpg" alt="Gallery Image 42">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 32.jpg" data-fancybox="gallery" data-caption="Gallery Image 43">
-        <img src="./assets/np 32.jpg" alt="Gallery Image 43">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 33.jpg" data-fancybox="gallery" data-caption="Gallery Image 44">
-        <img src="./assets/np 33.jpg" alt="Gallery Image 44">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 34.jpg" data-fancybox="gallery" data-caption="Gallery Image 45">
-        <img src="./assets/np 34.jpg" alt="Gallery Image 45">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 35.jpg" data-fancybox="gallery" data-caption="Gallery Image 46">
-        <img src="./assets/np 35.jpg" alt="Gallery Image 46">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 36.jpg" data-fancybox="gallery" data-caption="Gallery Image 47">
-        <img src="./assets/np 36.jpg" alt="Gallery Image 47">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 37.jpg" data-fancybox="gallery" data-caption="Gallery Image 48">
-        <img src="./assets/np 37.jpg" alt="Gallery Image 48">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 39.jpg" data-fancybox="gallery" data-caption="Gallery Image 49">
-        <img src="./assets/np 39.jpg" alt="Gallery Image 49">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 41.jpg" data-fancybox="gallery" data-caption="Gallery Image 50">
-        <img src="./assets/np 41.jpg" alt="Gallery Image 50">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 42.jpg" data-fancybox="gallery" data-caption="Gallery Image 51">
-        <img src="./assets/np 42.jpg" alt="Gallery Image 51">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="./assets/np 38.jpg" data-fancybox="gallery" data-caption="Gallery Image 52">
-        <img src="./assets/np 38.jpg" alt="Gallery Image 52">
-      </a>
+    
+    <div class="member-card">
+      <div class="card-bg"></div>
+      <div class="card-content">
+        <div class="img-container">
+          <img src="/api/placeholder/400/400" alt="सुरेश विक">
+        </div>
+        <h3 class="name">सुरेश विक</h3>
+        <h4 class="role">सल्लाहकार</h4>
+        <p class="quote">"अनुभवलाई सम्मान गरौं, सिकाइलाई बढाऔं।"</p>
+        <div class="social-icons">
+          <div class="social-icon">f</div>
+          <div class="social-icon">in</div>
+          <div class="social-icon">@</div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+
+
+
+
 
 
 
@@ -999,7 +1017,7 @@
           <li><a href="high.html">नेतृत्व</a></li>
           <li><a href="resource.html">स्रोतहरू</a></li>
           <li><a href="pic.html">ग्यालरी</a></li>
-          <li><a href="contact.php">सम्पर्क</a></li>
+          <li><a href="conatct.html">सम्पर्क</a></li>
         </ul>
       </div>
       
@@ -1037,14 +1055,6 @@
   </div>
 </footer>
 
-
-
-
-
-
-
-
-
   <script>
     // Mobile menu toggle
     const menuToggle = document.getElementById('menuToggle');
@@ -1079,51 +1089,6 @@
         });
       });
     });
-
-
-
-
-
-
-
-
-
-    $(document).ready(function() {
-    // Initialize Fancybox
-    $('[data-fancybox="gallery"]').fancybox({
-      buttons: [
-        "zoom",
-        "slideShow",
-        "fullScreen",
-        "download",
-        "thumbs",
-        "close"
-      ],
-      loop: true,
-      animationEffect: "fade",
-      transitionEffect: "slide",
-      protect: true,
-      touch: {
-        vertical: true,
-        momentum: true
-      },
-      mobile: {
-        clickContent: function(current, event) {
-          return current.type === "image" ? "toggleControls" : false;
-        },
-        clickSlide: function(current, event) {
-          return current.type === "image" ? "toggleControls" : "close";
-        }
-      }
-    });
-  });
-
-
-
-
-
-
-
   </script>
 </body>
 </html>
