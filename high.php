@@ -780,9 +780,9 @@
       <div class="card-bg"></div>
       <div class="card-content">
         <div class="img-container">
-          <img src="/api/placeholder/400/400" alt="लक्ष्मण कार्की">
+          <img src="./assets/surya buwa.jpg" alt="लक्ष्मण कार्की">
         </div>
-        <h3 class="name">लक्ष्मण कार्की</h3>
+        <h3 class="name">सुर्य भक्त अधिकारी</h3>
         <h4 class="role">अध्यक्ष</h4>
         <p class="quote">"समाजको समृद्धिका लागि खेलकुद अनिवार्य छ।"</p>
         <div class="social-icons">
@@ -797,9 +797,9 @@
       <div class="card-bg"></div>
       <div class="card-content">
         <div class="img-container">
-          <img src="/api/placeholder/400/400" alt="सिता गुरुङ">
+          <img src="./assets/nepalking.jpg" alt="सिता गुरुङ">
         </div>
-        <h3 class="name">सिता गुरुङ</h3>
+        <h3 class="name">शेरबहादुर देउवा</h3>
         <h4 class="role">उपाध्यक्ष</h4>
         <p class="quote">"महिला सहभागिता खेलकुदमा बढाउनुपर्छ।"</p>
         <div class="social-icons">
@@ -814,9 +814,9 @@
       <div class="card-bg"></div>
       <div class="card-content">
         <div class="img-container">
-          <img src="./assets/laxman.jpg" alt="राम थापा">
+          <img src="./assets/suu.jpg" alt="राम थापा">
         </div>
-        <h3 class="name">राम थापा</h3>
+        <h3 class="name">शुक्र राज शास्त्री</h3>
         <h4 class="role">महासचिव</h4>
         <p class="quote">"युवाहरूलाई नेतृत्वका लागि प्रेरित गरौं।"</p>
         <div class="social-icons">
@@ -831,9 +831,9 @@
       <div class="card-bg"></div>
       <div class="card-content">
         <div class="img-container">
-          <img src="./assets/laxman.jpg" alt="गीता शर्मा">
+          <img src="./assets/mh.jpg" alt="गीता शर्मा">
         </div>
-        <h3 class="name">गीता शर्मा</h3>
+        <h3 class="name">महेन्द्र ध्वज जि सि</h3>
         <h4 class="role">कोषाध्यक्ष</h4>
         <p class="quote">"पारदर्शिता नै संस्थाको बलियो आधार हो।"</p>
         <div class="social-icons">
@@ -865,9 +865,9 @@
       <div class="card-bg"></div>
       <div class="card-content">
         <div class="img-container">
-          <img src="/api/placeholder/400/400" alt="सरिता पौडेल">
+          <img src="./assets/gop.jpg" alt="सरिता पौडेल">
         </div>
-        <h3 class="name">सरिता पौडेल</h3>
+        <h3 class="name">गोपाल सापकोटा</h3>
         <h4 class="role">सदस्य</h4>
         <p class="quote">"सामूहिक भावनाले हरेक लक्ष्य पूरा हुन्छ।"</p>
         <div class="social-icons">
@@ -882,9 +882,9 @@
       <div class="card-bg"></div>
       <div class="card-content">
         <div class="img-container">
-          <img src="/api/placeholder/400/400" alt="अजय श्रेष्ठ">
+          <img src="./assets/bd.jpg" alt="अजय श्रेष्ठ">
         </div>
-        <h3 class="name">अजय श्रेष्ठ</h3>
+        <h3 class="name">बद्री सापकोटा</h3>
         <h4 class="role">विभागीय प्रमुख</h4>
         <p class="quote">"प्रतिस्पर्धात्मक भावनाले उन्नति गर्छौं।"</p>
         <div class="social-icons">
@@ -901,7 +901,7 @@
         <div class="img-container">
           <img src="/api/placeholder/400/400" alt="अन्जली तामाङ">
         </div>
-        <h3 class="name">अन्जली तामाङ</h3>
+        <h3 class="name">गोपाल सापकोटा</h3>
         <h4 class="role">संयोजक</h4>
         <p class="quote">"समावेशी खेलकुद नीति आवश्यक छ।"</p>
         <div class="social-icons">
@@ -916,7 +916,7 @@
       <div class="card-bg"></div>
       <div class="card-content">
         <div class="img-container">
-          <img src="/api/placeholder/400/400" alt="बिनोद बस्नेत">
+          <img src="./assets/bd.jpg" alt="बिनोद बस्नेत">
         </div>
         <h3 class="name">बिनोद बस्नेत</h3>
         <h4 class="role">योजना प्रमुख</h4>

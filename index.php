@@ -1805,7 +1805,7 @@
 <section class="achievements-section" id="achievements">
   <div class="container">
     <h2 class="section-heading" >हाम्रो उपलब्धिहरू</h2>
-    <p class="sub-heading" style="color: whitesmoke;">नेपाली काँग्रेस, गैंडाकोट वडा नं. ५ का माइलस्टोन र उपलब्धिहरूलाई पत्ता लगाउनुहोस्।</p>
+    <p class="sub-heading" style="color: black;">नेपाली काँग्रेस, गैंडाकोट वडा नं. ५ का माइलस्टोन र उपलब्धिहरूलाई पत्ता लगाउनुहोस्।</p>
 
     <div class="achievement-cards">
 
@@ -1855,61 +1855,61 @@
 
 
 <section class="testimonial-section">
-  <h2>हाम्रा सन्तुष्ट समर्थकहरू</h2>
+  <h2> गैंडाकोट वडा नं. ५- पूर्व सभापति हरू</h2>
   <div class="testimonials">
     <!-- Testimonial 1 -->
     <div class="testimonial">
-      <img src="https://via.placeholder.com/100" alt="User">
+      <img src="./assets/dol.jpg" alt="User">
       <p>नेतृत्वप्रति पूर्ण विश्वास छ। यो टिमले धेरै राम्रो काम गरिरहेको छ।</p>
-      <div class="name">राम बहादुर थापा</div>
+      <div class="name">डोलनाथ बगाले</div>
       <div class="location">गैंडाकोट वडा नं. ५ - नेपाली कांग्रेस</div>
     </div>
 
     <!-- Testimonial 2 -->
     <div class="testimonial">
-      <img src="https://via.placeholder.com/100" alt="User">
+      <img src="./assets/tara.jpg" alt="User">
       <p>समृद्धिको यात्रा यिनै नेताहरूसँग सम्भव छ। जय कांग्रेस!</p>
-      <div class="name">सीता कँडेल</div>
+      <div class="name">तारापती खरेल</div>
       <div class="location">गैंडाकोट वडा नं. ५ - नेपाली कांग्रेस</div>
     </div>
 
     <!-- Testimonial 3 -->
     <div class="testimonial">
-      <img src="https://via.placeholder.com/100" alt="User">
+      <img src="./assets/perm.jpg" alt="User">
       <p>स्थानीय विकासमा सबैभन्दा बढी योगदान यिनैले दिनुभएको छ।</p>
-      <div class="name">विपिन श्रेष्ठ</div>
+      <div class="name">प्रेमनाथ गौत</div>
       <div class="location">गैंडाकोट वडा नं. ५ - नेपाली कांग्रेस</div>
     </div>
 
     <!-- Testimonial 4 -->
     <div class="testimonial">
-      <img src="https://via.placeholder.com/100" alt="User">
+      <img src="./assets/dr.jpg" alt="User">
       <p>शिक्षा र स्वास्थ्यका क्षेत्रमा यिनीहरूको योजना प्रशंसनीय छ।</p>
-      <div class="name">अनिता गुरुङ</div>
+      <div class="name">द्रोण वन सन्यासी</div>
       <div class="location">गैंडाकोट वडा नं. ५ - नेपाली कांग्रेस</div>
     </div>
 
     <!-- Testimonial 5 -->
     <div class="testimonial">
-      <img src="https://via.placeholder.com/100" alt="User">
+      <img src="./assets/gh.jpg" alt="User">
       <p>सबै उमेर समूहका लागि काम गरिरहेका छन्। धन्यवाद!</p>
-      <div class="name">केशव लम्साल</div>
+      <div class="name">गोविन्दा घिमिरे</div>
       <div class="location">गैंडाकोट वडा नं. ५ - नेपाली कांग्रेस</div>
     </div>
 
-    <!-- Testimonial 6 -->
+    <!-- Testimonial 6
     <div class="testimonial">
       <img src="https://via.placeholder.com/100" alt="User">
       <p>समाजसेवामा अग्रसर यो टिम साँच्चै प्रेरणादायी छ।</p>
       <div class="name">रीता खनाल</div>
       <div class="location">गैंडाकोट वडा नं. ५ - नेपाली कांग्रेस</div>
-    </div>
+    </div> -->
 
     <!-- Testimonial 7 -->
     <div class="testimonial">
-      <img src="https://via.placeholder.com/100" alt="User">
+      <img src="./assets/laxman.jpg" alt="User">
       <p>यिनीहरूलाई समर्थन गर्नु भनेको हाम्रो भविष्य सुनिश्चित गर्नु हो।</p>
-      <div class="name">सुरेश अधिकारी</div>
+      <div class="name">लक्ष्मण कार्की</div>
       <div class="location">गैंडाकोट वडा नं. ५ - नेपाली कांग्रेस</div>
     </div>
   </div>

@@ -877,10 +877,10 @@
       <!-- Nepal Tarun Dal Members -->
       <div class="team-card" data-category="tarun">
           <div class="team-card-image">
-              <img src="/api/placeholder/400/320" alt="प्रकाश थापा">
+              <img src="./assets/sub.jpg" alt="प्रकाश थापा">
           </div>
           <div class="team-card-content">
-              <h3>प्रकाश थापा</h3>
+              <h3>शुभाष आचार्य</h3>
               <p class="designation">समन्वयक</p>
               <p class="bio">पर्यावरण संरक्षण र दिगो विकास अभ्यासमा केन्द्रित युवाशक्ति।</p>
           </div>
@@ -900,10 +900,10 @@
       <!-- Nepal Women Dal Members -->
       <div class="team-card" data-category="women">
           <div class="team-card-image">
-              <img src="/api/placeholder/400/320" alt="सरिता गुरुङ">
+              <img src="./assets/laxmi.jpg" alt="सरिता गुरुङ">
           </div>
           <div class="team-card-content">
-              <h3>सरिता गुरुङ</h3>
+              <h3>लक्ष्मी कँडेल सापकोटा</h3>
               <p class="designation">अध्यक्ष</p>
               <p class="bio">महिला अधिकार र लैङ्गिक समानताका लागि कानुनी संरचनामा दखल राख्ने अभियन्ता।</p>
           </div>
@@ -934,7 +934,7 @@
   
       <div class="team-card" data-category="student">
           <div class="team-card-image">
-              <img src="/api/placeholder/400/320" alt="दीपिका महार्जन">
+              <img src="./assets/sar.jpg" alt="दीपिका महार्जन">
           </div>
           <div class="team-card-content">
               <h3>दीपिका महार्जन</h3>
